@@ -11,7 +11,7 @@ for i in range(1,t+1):
                 bread += k
 
         if c == reached_sec[idx]: # 손님이 올 시간이라면
-            if bread == 0: # 남은 붕어빵이 없다면
+            if bread == 0: # 남은 붕어빵이 없다면 
                 answer = "Impossible"
                 break
 
