@@ -9,5 +9,6 @@ for t in range(1,int(input())+1):
             break
     print('#%d'%t,a)
 
+
 n = 2, m = 2, k=2
 (3//2) * 2 - 0 - 1 < 0
