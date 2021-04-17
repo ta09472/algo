@@ -1,21 +1,12 @@
 t = int(input())
-for i in range(1,t+1):
-    n = int(input())
-    n_earnlist = list(map(int, input().split()))
-    mean = sum(n_earnlist) / n
-    mean_low = []
-    for j in n_earnlist:
-        if j <= mean:
-            mean_low.append(j)
+for _ in range(1,t+1):
+    A, B = map(int, input().split())
+    cnt = 0
+    for i in range(A, B + 1):
+        root_num = i ** (1 / 2)
+        if root_num == int(root_num):
+            root_num = str(int(root_num))
+            if str(i) == str(i)[::-1] and root_num == root_num[::-1]:
+                cnt += 1
 
-    print(f"#{i} {len(mean_low)}")t = int(input())
-for i in range(1,t+1):
-    n = int(input())
-    n_earnlist = list(map(int, input().split()))
-    mean = sum(n_earnlist) / n
-    mean_low = []
-    for j in n_earnlist:
-        if j <= mean:
-            mean_low.append(j)
-
-    print(f"#{i} {len(mean_low)}")
+    print(f'#{_} {cnt}')
