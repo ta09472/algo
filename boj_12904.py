@@ -8,7 +8,7 @@ while True:
         t.pop()
     elif t[-1] == "B":
         t.pop()
-        t = t[::-1]
+        t.reverse()
 
 if s == t:
     print(1)
