@@ -1,10 +1,11 @@
-N, K = map(int, input().split())
+n, k = map(int, input().split())
 cnt = 0
-nums = [True] * (N + 1)
-for i in range(2, N + 1):
-    for j in range(i, N + 1, i):
-        if nums[j] != False:
+nums = [True for _ in range(n+1)]
+for i in range(2, n + 1):
+    for j in range(i, n + 1, i):
+        if nums[j] == True:
             nums[j] = False
-            cnt += 1
-            if cnt == K:
+            cnt = cnt + 1
+            if cnt == k:
                 print(j)
+                break
